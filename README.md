@@ -24,6 +24,7 @@ When decoding the message, you need to know the number the original message was 
 
 #### App Screenshot
 
+![Caesar screenshot](images/caesar-screenshot.png)  
 
 #### Logic of the caesar() function
 
