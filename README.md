@@ -8,7 +8,7 @@ Decoder Ring is a live application that allows a user to use a Caesar Shift, Pol
 ## Technology
 
 ### Frontend:
-- Javascript, HTML  
+- JavaScript, HTML  
   
 ![JS icon](images/javascript.png)
 ![HTML icon](images/html.png)  
