@@ -3,13 +3,12 @@
 Periodic Tables is a dynamic reservation and seating system for restaurant managers and employees. A user can view reservations by date, add new reservations, edit/cancel/search for existing reservations, add new tables, and seat/unseat reservations at tables.
 
 ## Links
-[Live Heroku Client App](https://res-app-client-morgan.herokuapp.com/)  
-[Live Heroku Server](https://res-app-server-morgan.herokuapp.com/)
+[Live Vercel Client App](https://encryption-decryption-app.vercel.app/)  
 
 ## Technology
 
 ### Frontend:
-- Javascript, React, React Router, React Hooks, Bootstrap, Open Iconic, HTML, CSS  
+- Javascript, HTML  
   
 ![JS icon](images/javascript.png)
 ![HTML icon](images/html.png)  
