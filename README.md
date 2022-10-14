@@ -14,7 +14,7 @@ Decoder Ring is a live application that allows a user to utilize a Caesar Shift,
 ## How the App Works
 ### Caesar Shift
 
-![Caesar shift](./docs/caesar.png)
+![Caesar shift](images/caesar.png)
 
 The Caesar Shift is a type of substitution cipher originally used by Julius Caesar to protect messages of military significance. It relies on taking the alphabet and "shifting" letters to the right or left, based on the typical alphabetic order.
 
@@ -105,7 +105,7 @@ polybius("44324233521254134", false); //> false
 
 ### Substitution Cipher
 
-![Substitution cipher](./docs/substitution.jpeg)
+![Substitution cipher](images/substitution.jpeg)
 
 The Substitution Cipher requires a standard alphabet and a substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet. This cipher requires that the recipient have the substitution alphabet; otherwise, it will be difficult for them to decode the message.
 
