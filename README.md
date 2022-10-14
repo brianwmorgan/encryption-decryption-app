@@ -20,7 +20,7 @@ The Caesar Shift is a type of substitution cipher originally used by Julius Caes
 
 ![Caesar shift](images/caesar.png)  
 
-When decoding the message, you need to know the number the original message was shifted by so that you can shift in the opposite direction.
+When decoding the message, the number the original message was shifted by must be provided so the message can be shifted in the opposite direction.
 
 #### App Screenshot
 
@@ -36,7 +36,7 @@ The `caesar()` function in the `src/caesar.js` file has three parameters:
 
 The following constraints and rules are in place:
 
-- If the `shift` value is not present, equal to `0`, less than `-25`, or greater than `25`, the function returns `false`.
+- If the _shift_ value is not present, equal to `0`, less than `-25`, or greater than `25`, the function returns `false` and produces an error message.
 - Spaces in the message are maintained before and after encoding or decoding, as are other non-alphabetic symbols.
 - Encoding is case-insensitive (e.g., both "a" or "A" are encoded to the same result).
 - If a letter is shifted so that it goes "off" the alphabet (e.g. a shift of 3 on the letter "z"), it wraps around to the front of the alphabet (e.g. "z" becomes "c").
@@ -58,6 +58,8 @@ caesar("thinkful", -26); //> false
 
 ### Polybius Square
 
+The Polybius Square is a cipher that is achieved by arranging a typical alphabet into a grid. Each letter is represented through a coordinate. Typically, it is possible to arrange the letters however you like and read off the coordinates in whatever direction you like.  
+
 |       | **1** | **2** | **3** | **4** | **5** |
 | ----- | ----- | ----- | ----- | ----- | ----- |
 | **1** | A     | B     | C     | D     | E     |
@@ -66,7 +68,6 @@ caesar("thinkful", -26); //> false
 | **4** | Q     | R     | S     | T     | U     |
 | **5** | V     | W     | X     | Y     | Z     |
 
-The Polybius Square is a cipher that is achieved by arranging a typical alphabet into a grid. Each letter is represented through a coordinate. Typically, it is possible to arrange the letters however you like and read off the coordinates in whatever direction you like.
 
 In this example, the grid will be arranged as above and coordinates will be read by comparing the first digit to the number on the top of the table and the second digit to that on the left. For example, in the above table, the letter "B" would be represented by the numerical pair "21".
 
@@ -76,21 +77,25 @@ In this example, the grid will be arranged as above and coordinates will be read
 
 When decoding the message, each pair of numbers is translated using the coordinates.
 
-#### polybius()
+#### App Screenshot
+
+![Polybius screenshot](images/polybius-screenshot.png)
+
+#### Logic of the polybius() function
 
 The `polybius()` function in the `src/polybius.js` file has two parameters:
 
 - _input_ is a string that refers to the inputted text to be encoded or decoded.
 - _encode_ is a boolean that refers to whether you should encode or decode the message. By default it is set to `true`.
 
-When building the function, keep the following constraints and rules in mind:
+The following constraints and rules are in place:
 
-- You are welcome to assume that _no additional symbols will be included as part of the input._ Only spaces and letters will be included.
-- When encoding, your output should _still be a string._
-- When decoding, the number of characters in the string _excluding spaces_ should be even. Otherwise, return `false`.
-- Spaces in the message should be maintained before and after encoding or decoding.
-- Encoding is case-insensitive (e.g., both "a" or "A" would be encoded to the same result).
-- The letters "I" and "J" share a space. When encoding, both letters can be converted to `42`, but when decoding, both letters should be shown as `"(i/j)"`.
+- The function assumes that no additional symbols are included as part of the input. Only spaces and letters can be included.
+- When encoding, the output will still be a string.
+- When decoding, the number of characters in the string (excluding spaces) need to be even. Otherwise, it will return `false` and produce an error.
+- Spaces in the message are maintained before and after encoding or decoding.
+- Encoding is case-insensitive (e.g., both "a" or "A" are encoded to the same result).
+- The letters "I" and "J" share a space. When encoding, both letters are converted to `42`, but when decoding, both letters are shown as `"(i/j)"`.
 
 #### Examples
 
@@ -151,17 +156,5 @@ Follow the instructions below to get this project up and running on your own mac
 
 - Fork and clone this repository.
 - Run `npm install` to install the dependencies needed for this project.
-
-To run the tests, you can run the following command:
-
-```bash
-npm test
-```
-
-To watch how the code you write affects the application website, you can run the following command, which will start a server and take over your terminal window:
-
-```bash
-npm start
-```
-
-To stop the server and regain control of your terminal, you can press `Ctrl + C`.
+- To run the app, run `npm start`.
+- To run the tests, run `npm test`.
