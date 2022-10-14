@@ -71,10 +71,6 @@ The Polybius Square is a cipher that is achieved by arranging a typical alphabet
 
 In this example, the grid will be arranged as above and coordinates will be read by comparing the first digit to the number on the top of the table and the second digit to that on the left. For example, in the above table, the letter "B" would be represented by the numerical pair "21".
 
-```
-"thinkful" -> "4432423352125413"
-```
-
 When decoding the message, each pair of numbers is translated using the coordinates.
 
 #### App Screenshot
