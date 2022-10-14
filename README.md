@@ -82,7 +82,7 @@ When decoding the message, each pair of numbers is translated using the coordina
 The `polybius()` function in the `src/polybius.js` file has two parameters:
 
 - _input_ is a string that refers to the inputted text to be encoded or decoded.
-- _encode_ is a boolean that refers to whether you should encode or decode the message. By default it is set to `true`.
+- _encode_ is a boolean that refers to whether it will encode or decode the message. By default it is set to `true` (encode).
 
 The following constraints and rules are in place:
 
@@ -106,9 +106,9 @@ polybius("44324233521254134", false); //> false
 
 ### Substitution Cipher
 
-![Substitution cipher](images/substitution.jpeg)
+The Substitution Cipher requires a standard alphabet and a substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet. This cipher requires that the recipient have the substitution alphabet. Otherwise, the recipient won't be able to decode the message.  
 
-The Substitution Cipher requires a standard alphabet and a substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet. This cipher requires that the recipient have the substitution alphabet; otherwise, it will be difficult for them to decode the message.
+![Substitution cipher](images/substitution.jpeg)  
 
 For example, in the image above, the word "HELLO" would be translated as follows:
 
@@ -119,21 +119,25 @@ For example, in the image above, the word "HELLO" would be translated as follows
 
 This would result in the code "RMWWL". To decrypt this code, you would simply take the result and transpose back from the substitution alphabet to the standard alphabet.
 
-#### substitution()
+#### App Screenshot
+
+![Substitution screenshot](images/substitution-screenshot.png)
+
+#### Logic of the substitution() function
 
 The `substitution()` function in the `src/substitution.js` file has three parameters:
 
 - _input_ is a string that refers to the inputted text to be encoded or decoded.
 - _alphabet_ is a string that refers to substitution alphabet.
-- _encode_ is a boolean that refers to whether you should encode or decode the message. By default, it is set to `true`.
+- _encode_ is a boolean that refers to whether it will encode or decode the message. By default, it is set to `true` (encode).
 
-When building the function, keep the following constraints and rules in mind:
+The following constraints and rules are in place:
 
-- You are welcome to assume that _no additional symbols will be included as part of the input._ Only spaces and letters will be included.
-- Spaces in the message should be maintained before and after encoding or decoding.
-- Encoding/decoding is case-insensitive (e.g., both "a" or "A" would be encoded to the same result).
-- The `alphabet` parameter must be a string of exactly 26 characters. Otherwise, it should return `false`.
-- All of the characters in the `alphabet` parameter _must be unique._ Otherwise, it should return `false`.
+- The function assumes that no additional symbols will be included as part of the input. Only spaces and letters can be included.
+- Spaces in the message are maintained before and after encoding or decoding.
+- Encoding/decoding is case-insensitive (e.g., both "a" or "A" are encoded to the same result).
+- The _alphabet_ parameter must be a string of exactly 26 characters. Otherwise, the function will return `false` and produce an error.
+- All of the characters in the _alphabet_ parameter must be unique. Otherwise, the function will return `false` and produce an error.
 
 #### Examples
 
