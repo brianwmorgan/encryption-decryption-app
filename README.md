@@ -54,6 +54,7 @@ caesar("BPQA qa I amkzmb umaaiom!", 8, false); //> 'this is a secret message!'
 caesar("thinkful"); //> false
 caesar("thinkful", 99); //> false
 caesar("thinkful", -26); //> false    
+```
 
 ### Polybius Square
 The **Dashboard** page serves as...  
