@@ -33,8 +33,6 @@ const polybiusModule = (function () {
       // create an empty array for pairs of numbers and spaces
       let inputPairsAndSpaces = [];
       
-      // the code below is adapted from: https://github.com/Rott-Kitchell/Project_Decoder_Ring_1/blob/main/src/polybius.js
-      
       // loop through each character in the original input by 2
       for (i = 0; i < input.length; i = i+2) {
         // define two new variables as the current character and the next character
