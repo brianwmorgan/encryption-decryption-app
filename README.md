@@ -1,6 +1,6 @@
 # Decoder Ring | Encryption/Decryption App
 
-Periodic Tables is a dynamic reservation and seating system for restaurant managers and employees. A user can view reservations by date, add new reservations, edit/cancel/search for existing reservations, add new tables, and seat/unseat reservations at tables.
+Decoder Ring is a live application that allows a user to use a Caesar Shift, Polybius Square, or Substitution Cipher to encode or decode secret messages.
 
 ## Links
 [Live Vercel Client App](https://encryption-decryption-app.vercel.app/)  
