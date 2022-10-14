@@ -6,25 +6,24 @@ Decoder Ring is a live application that allows a user to utilize a Caesar Shift,
 [Live Vercel Client App](https://encryption-decryption-app.vercel.app/)  
 
 ## Technology
-- JavaScript, HTML  
+- JavaScript, HTML, Bootstrap, Mocha  
   
 ![JS icon](images/javascript.png)
-![HTML icon](images/html.png)  
-
-## How the App Works
+![HTML icon](images/html.png)
+![Bootstrap icon](images/bootstrap.png)
+![Mocha icon](images/mocha.png)  
+  
+## App Features
 ### Caesar Shift
 
-![Caesar shift](images/caesar.png)
+The Caesar Shift is a type of substitution cipher originally used by Julius Caesar to protect messages of military significance. It relies on taking the alphabet and "shifting" letters to the right or left, based on the typical alphabetic order. For example, if you were to "shift" the alphabet to the left by 3, the letter "A" would become "X", the letter "E" would become "B", et cetera.  
 
-The Caesar Shift is a type of substitution cipher originally used by Julius Caesar to protect messages of military significance. It relies on taking the alphabet and "shifting" letters to the right or left, based on the typical alphabetic order.
-
-For example, if you were to "shift" the alphabet to the right by 3, the letter "A" would become "D".
-
-```
-"thinkful" -> "wklqnixo"
-```
+![Caesar shift](images/caesar.png)  
 
 When decoding the message, you need to know the number the original message was shifted by so that you can shift in the opposite direction.
+
+#### App Screenshot
+
 
 #### caesar()
 
