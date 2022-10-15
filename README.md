@@ -13,6 +13,11 @@ Decoder Ring is a live application that allows a user to utilize a Caesar Shift,
 ![Bootstrap icon](images/bootstrap.png)
 ![Mocha icon](images/mocha.png)  
   
+## Installation
+1. Fork and clone this repository.
+2. Run `npm install` to install project dependencies.
+3. Run `npm start` to start the application.
+
 ## App Features
 ### Caesar Shift
 
@@ -149,12 +154,3 @@ substitution("jrufscpw", "xoyqmcgrukswaflnthdjpzibev", false); //> 'thinkful'
 substitution("thinkful", "short"); //> false
 substitution("thinkful", "abcabcabcabcabcabcabcabcyz"); //> false
 ``` 
-
-## Installation
-
-Follow the instructions below to get this project up and running on your own machine:
-
-- Fork and clone this repository.
-- Run `npm install` to install the dependencies needed for this project.
-- To run the app, run `npm start`.
-- To run the tests, run `npm test`.
