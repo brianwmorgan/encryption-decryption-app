@@ -3,7 +3,7 @@
 Decoder Ring is a live application that allows a user to utilize a Caesar Shift, Polybius Square, or Substitution Cipher in order to encode or decode secret messages.
 
 ## Links
-[Live Vercel Client App](https://encryption-decryption-app.vercel.app/)  
+[Live App](https://encryption-decryption-app.vercel.app/) deployed to Vercel  
 
 ## Technology
 - JavaScript, HTML, Bootstrap, Mocha  
