@@ -1,3 +1,51 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #2 - DECEMBER 2022
+
+const substitutionModule = (function () {
+  
+  function substitution(input, alphabet, encode = true) {
+    if (!alphabet || alphabet.length !== 26) return false;
+    let uniqueCharacters = "";
+    for (let i = 0; i < alphabet.length; i++) {
+      let character = alphabet[i];
+      if (!uniqueCharacters.includes(character)) uniqueCharacters += character;
+    }
+    if (uniqueCharacters.length !== 26) return false;
+
+    let standardAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    let givenAlphabet = alphabet;
+    let message = input.toLowerCase();
+    let result = "";
+
+    for (let i = 0; i < message.length; i++) {
+      let character = message[i];
+      if (character === " ") {
+        result += character;
+      } else {
+        if (encode) {
+          let index = standardAlphabet.indexOf(character);
+          result += givenAlphabet[index];
+        } else {
+          let index = givenAlphabet.indexOf(character);
+          result += standardAlphabet[index];
+        }
+      }
+    }
+
+    return result;
+  }
+
+  return {
+    substitution,
+  };
+})();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #1 - FEBRUARY 2022
+
+/*
 const substitutionModule = (function () {
 
   function substitution(input, alphabet, encode = true) {
@@ -67,5 +115,8 @@ const substitutionModule = (function () {
     substitution,
   };
 })();
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 module.exports = { substitution: substitutionModule.substitution };
