@@ -1,3 +1,50 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #2 - DECEMBER 2022
+
+const expect = require("chai").expect;
+const { polybius } = require("../src/polybius.js");
+
+describe("polybius()", () => {
+  it("should translate the letters 'i' and 'j' to '42' when encoding", () => {
+    const input = "ij";
+    const expected = "4242";
+    const actual = polybius(input);
+    expect(actual).to.equal(expected);
+  });
+  it("should translate '42' to '(i/j)' when decoding", () => {
+    const input = "42";
+    const encode = false;
+    const expected = "(i/j)";
+    const actual = polybius(input, encode);
+    expect(actual).to.equal(expected);
+  });
+  it("should ignore capital letters", () => {
+    const input = "ABCabc";
+    const expected = "112131112131";
+    const actual = polybius(input);
+    expect(actual).to.equal(expected);
+  });
+  it("should maintain spaces when encoding", () => {
+    const input = "a b c d e";
+    const expected = "11 21 31 41 51";
+    const actual = polybius(input);
+    expect(actual).to.equal(expected);
+  });
+  it("should maintain spaces when decoding", () => {
+    const input = "11 21 31 41 51";
+    const encode = false;
+    const expected = "a b c d e";
+    const actual = polybius(input, encode);
+    expect(actual).to.equal(expected);
+  });
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #1 - FEBRUARY 2022
+
+/*
 const expect = require("chai").expect;
 const { polybius } = require("../src/polybius");
 
@@ -66,3 +113,6 @@ describe("polybius", () => {
     });
 
 });
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
