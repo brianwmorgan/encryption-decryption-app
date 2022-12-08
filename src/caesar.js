@@ -1,3 +1,44 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #2 - DECEMBER 2022
+
+const caesarModule = (function () {
+  // you can add any code you want within this function scope
+
+  function caesar(input, shift, encode = true) {
+    if (shift === 0 || shift < -25 || shift > 25 || !shift) return false;
+    if (encode === false) shift = shift * -1;
+
+    let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    const message = input.toLowerCase();
+    let result = "";
+
+    for (let i = 0; i < message.length; i++) {
+      let character = message[i];
+      if (!alphabet.includes(character)) {
+        result += character;
+      } else {
+        let currentIndex = alphabet.indexOf(character);
+        let shiftedIndex = currentIndex + shift;
+        if (shiftedIndex > 25) shiftedIndex = shiftedIndex - 26;
+        if (shiftedIndex < 0) shiftedIndex = shiftedIndex + 26;
+        result += alphabet[shiftedIndex];
+      }
+    }
+
+    return result;
+  }
+
+  return {
+    caesar,
+  };
+})();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VERSION #1 - FEBRUARY 2022
+
+/*
 const caesarModule = (function () {
 
   function caesar(input, shift, encode = true) {
@@ -29,5 +70,8 @@ const caesarModule = (function () {
     caesar,
   };
 })();
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 module.exports = { caesar: caesarModule.caesar };
